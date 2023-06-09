@@ -1,6 +1,6 @@
 [submodule "server"]
 	path = server
-	url = git@github.com:DetKewlDog/build-monitor-server.git
+	url =  https://github.com/DetKewlDog/build-monitor-server.git
 [submodule "client"]
 	path = client
-	url = git@github.com:DetKewlDog/build-monitor-client.git
+	url =  https://github.com/DetKewlDog/build-monitor-client.git
