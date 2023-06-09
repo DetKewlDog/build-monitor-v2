@@ -1,0 +1,166 @@
+:root {
+    --bg1: #1a1a1a;
+    --bg2: #262626;
+    --hl1: #2f2f2f;
+    --hl2: #424242;
+    --hl3: #4c4c4c;
+    --text1: #ffffff;
+    --text2: #aaaaaa;
+    --error: #ff4d4d;
+    --print: #d6e4ff;
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--text1);
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.console-header {
+    margin: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+    background-color: var(--bg2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.console-title {
+	margin-inline: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.console-body {
+    padding: 15px;
+	padding-top: 0;
+}
+
+.console-output {
+    background-color: var(--bg2);
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 5px;
+	height: calc(100vh - 190px);
+	overflow-y: auto;
+
+  	/* Customize the scroll bar */
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+  	scrollbar-color: var(--hl2) var(--hl1);
+}
+
+.console-output::-webkit-scrollbar {
+  	width: 12px;
+}
+
+.console-output::-webkit-scrollbar-track {
+  	background-color: var(--hl1);
+	border-radius: 10px;
+}
+
+.console-output::-webkit-scrollbar-thumb {
+  	background-color: var(--hl2);
+	border-radius: 10px;
+}
+
+.console-output::-webkit-scrollbar-thumb:hover {
+  	background-color: var(--hl3);
+}
+
+.console-output::-webkit-scrollbar-thumb:active {
+    background-color: var(--hl2);
+}
+
+.console-output pre {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+	padding-left: 2.5px;
+}
+
+.console-output pre.error {
+    color: var(--error);
+}
+
+.console-output pre.print {
+    color: var(--print);
+}
+
+.console-input input {
+    width: calc(70% - 36.75px);
+    padding-top: 10px;
+    padding-bottom: 10px;;
+    background-color: var(--bg2);
+    border: none;
+    color: var(--text1);
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 15px;
+	text-indent: 10px;
+}
+
+.console-input input:hover {
+	background-color: var(--hl1);
+	transform: translateY(-2px);
+	transition: transform 0.3s ease-in-out;
+}
+
+.console-input input:active,
+.console-input input:not(:hover) {
+    background-color: var(--bg2);
+	transform: translateY(2px);
+	transition: transform 0.1s ease-in-out;
+}
+
+.console-input input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.console-input button {
+    width: 10%;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: var(--bg2);
+    border: none;
+    color: var(--text1);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.console-input button:hover {
+    background-color: var(--hl1);
+	transform: translateY(-2px);
+	transition: transform 0.3s ease-in-out;
+}
+
+.console-input button:active,
+.console-input button:not(:hover) {
+    background-color: var(--bg2);
+	transform: translateY(2px);
+	transition: transform 0.1s ease-in-out;
+}
+
+.console-input button.on {
+	background-color: var(--hl2);
+}
+
+.console-input button:hover.on {
+	background-color: var(--hl3);
+}
+
+.console-input button:active.on,
+.console-input button:not(:hover).on {
+    background-color: var(--hl2);
+	transform: translateY(2px);
+	transition: transform 0.1s ease-in-out;
+}

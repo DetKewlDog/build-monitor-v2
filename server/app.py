@@ -1,7 +1,9 @@
 from flask import Flask
+from flask_cors import CORS
 import monitor as Monitor
 
 app = Flask(__name__)
+CORS(app)
 
 # This code acts as a sort of API server
 # This will allow to communicate with it using javascript
@@ -19,4 +21,4 @@ def index():
 
 if __name__ == '__main__':
     Monitor.init()
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=2327)
